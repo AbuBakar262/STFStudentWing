@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership Form</title>
+<style>
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+.form-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin: -20px -20px 30px -20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.form-header h1, .form-header h2 {
+  margin: 0;
+  padding: 0;
+}
+.form-section {
+  margin-bottom: 20px;
+}
+.form-section h3 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin: 0 -20px 10px -20px;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-right: 20px
+}
+.form-row label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+.form-row input[type="text"],
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+.checkbox-group label {
+  margin: 0;
+}
+.form-row.gender {
+  align-items: flex-start;
+  flex-direction: row;
+}
+.form-row.gender .checkbox-group {
+  margin-right: 15px;
+}
+.form-footer {
+  text-align: right;
+}
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submit-button:hover {
+  background-color: #367c39;
+}
+/* Input field focus effect */
+input[type="text"]:focus, select:focus, textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76,175,80, 0.2);
+}
+/* Checkbox customization */
+.checkbox-group input[type="checkbox"] {
+  accent-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+<div class="form-container">
+    <div class="form-header">
+        <h1>SIKANDAR TIGER FORCE</h1>
+        <h2>STUDENT WING MANAGEMENT INFORMATION FORM</h2>
+    </div>
+
+    <form action="#" method="post">
+        <div class="form-section personal-block">
+            <h3 style="text-align: center;">Personal Information</h3>
+            <div class="form-row">
+                <label for="image-upload">Upload Image:</label>
+                <input type="file" id="image-upload" name="profileImage" accept="image/png, image/jpeg">
+            </div>
+            <div class="form-row">
+                <label>Name - نام</label>
+                <input type="text" name="name">
+            </div>
+            <div class="form-row">
+                <label>S/O - باپ کا نام</label>
+                <input type="text" name="s/o">
+            </div>
+            <div class="form-row">
+                <label>CNIC - شناختی کارڈ نمبر</label>
+                <input type="text" name="cnic">
+            </div>
+            <div class="form-row">
+                <label>Permanent Address - مستقل پتہ</label>
+                <input type="text" name="p_address">
+            </div>
+            <div class="form-row">
+                <label>UC Name - یونین کونسل کا نام</label>
+                <input type="text" name="uc_name">
+            </div>
+            <div class="form-row">
+                <label>NA No. - قومی اسمبلی کا نام</label>
+                <input type="text" name="na_no">
+            </div>
+            <div class="form-row">
+                <label>Gender - صنف</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male - مرد</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female - عورت</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other - دیگر</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <label>Date Of Birth - پیدائش کی تاریخ</label>
+                <input type="text" name="dob">
+            </div>
+            <div class="form-row">
+                <label>Blood Group - خون کا گروپ</label>
+                <input type="text" name="b_g">
+            </div>
+            <div class="form-row">
+                <label>PP No. - سوبائی اسمبلی نمبر</label>
+                <input type="text" name="pp_no">
+            </div>
+            <div class="form-row">
+                <label>Contact No. - رابطہ نمبر</label>
+                <input type="text" name="contact_no">
+            </div>
+            <div class="form-row">
+                <label>Email - ای میل</label>
+                <input type="text" name="email">
+            </div>
+        </div>
+
+        <div class="form-section social-media-block">
+            <h3 style="text-align: center;">Social Media Information</h3>
+            <div class="form-row">
+                <label>Social Media Platform Details - سوشل میڈیا پلیٹ فارم کی تفصیلات</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="facebook" name="facebook">
+                    <label for="facebook" style="padding-right: 20px; width: 65px">Facebook</label>
+                    <div class="form-row">
+                        <input type="text" name="facebook" placeholder="Facebook profile link">
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="youtube" name="youtube">
+                    <label for="youtube" style="padding-right: 20px; width: 65px">YouTube</label>
+                    <div class="form-row">
+                        <input type="text" name="youtube" placeholder="YouTube channel link">
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="whatsapp" name="whatsapp">
+                    <label for="whatsapp" style="padding-right: 20px; width: 65px">Whatsapp</label>
+                    <div class="form-row">
+                        <input type="text" name="whatsapp" placeholder="whatsapp number">
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="twitter" name="twitter">
+                    <label for="twitter" style="padding-right: 20px; width: 65px">Twitter</label>
+                    <div class="form-row">
+                        <input type="text" name="twitter" placeholder="Twitter profile link">
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="tiktok" name="tiktok">
+                    <label for="tiktok" style="padding-right: 20px; width: 65px">TikTok</label>
+                    <div class="form-row">
+                        <input type="text" name="tiktok" placeholder="TikTok id">
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="instagram" name="instagram">
+                    <label for="instagram" style="padding-right: 20px; width: 65px">Instagram</label>
+                    <div class="form-row">
+                        <input type="text" name="instagram" placeholder="Instagram Profile">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section education-block">
+            <h3 style="text-align: center;">Education Information</h3>
+            <div class="form-row">
+                <label>Qualification / Degree Name - قابلیت / ڈگری کا نام</label>
+                <input type="text" name="qualification">
+            </div>
+            <div class="form-row">
+                <label>Institution Name - ادارے کا نام</label>
+                <input type="text" name="inst_name">
+            </div>
+            <div class="form-row">
+                <label for="institution-category">Type of Institution: - :ادارے کی قسم</label>
+                <select id="institution-category" name="institutionCategory">
+                    <option value="government">Govt - سرکاری</option>
+                    <option value="private">Private - پرا‌ئيويٹ</option>
+                    <option value="trust">Trust - اپنا کاروبار</option>
+                    <option value="cadet">Cadet - بےروزگار</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label>Degree/Course Duration - ڈگری / کورس کی مدت</label>
+                <input type="text" name="dc_duration">
+            </div>
+            <div class="form-row">
+                <label>Extra Curricular Activities - غیر نصابی سر گرمیاں</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="sports" name="sports">
+                    <label for="sports">Sports - کھیل</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="e_sports" name="e_sports">
+                    <label for="e_sports">E-Sports / Computer Gaming - ای اسپورٹس / کمپیوٹر گیمنگ</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="athlete" name="athlete">
+                    <label for="athlete">Athlete - ايتھليٹ</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="others" name="others">
+                    <label for="others">Others - دیگر</label>
+                </div>
+            </div>
+            <!-- Repeat the form-row div for each field needed -->
+        </div>
+
+        <div class="form-footer">
+            <input type="submit" value="Submit" class="submit-button">
+        </div>
+    </form>
+</div>
+</body>
+</html>
